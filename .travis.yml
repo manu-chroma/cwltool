@@ -1,7 +1,12 @@
 matrix:
   include:
     - language: python
-      python: 2.7
+      python: 
+        - 2.7
+        - 3.3
+        - 3.4
+        - 3.5
+        - 3.6
       script:
         - pip install tox-travis
         - tox
@@ -11,6 +16,8 @@ matrix:
       services: docker
       before_script:
         - docker pull node:slim
+      env:
+        - version = v1.0
       script:
         - bash jenkins.bash
 
