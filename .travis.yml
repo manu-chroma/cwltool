@@ -1,12 +1,29 @@
 sudo: required
-language: bash
 os:
   - linux
-services:
-  - docker
-before_script:
-  - docker pull node:slim
-script:
-  - bash jenkins.bash
+
+matrix:
+	include:
+		- language: bash
+		services:
+		  - docker
+		before_script:
+		  - docker pull node:slim
+		script:
+		  - bash jenkins.bash
+		
+		- language: python
+		python:
+		  - 2.7
+		  - 3.3
+		  - 3.4
+		  - 3.5
+		  - 3.6
+		os:
+		  - linux
+		install:
+		  - pip install tox-travis
+		script: tox
+
 notifications:
-  email: false
+		  email: false
