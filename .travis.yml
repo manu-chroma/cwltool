@@ -38,7 +38,7 @@ matrix:
         - docker pull node:slim
       env:
         - version="v1.0"
-        - PYTHON_VERSION=3.5
+        - PYTHON_VERSION=3
       script:
         - bash jenkins.bash
 
