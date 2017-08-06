@@ -1,25 +1,32 @@
+sudo: required
+
 matrix:
   include:
-    - python: 2.7
+    - language: python
+      python: 2.7
       script:
         - pip install tox-travis
         - tox
-    - python: 3.3
-      script:
-        - pip install tox-travis
-        - tox
-
-    - python: 3.4
-      script:
-        - pip install tox-travis
-        - tox
-
-    - python: 3.5
+    - language: python
+      python: 3.3
       script:
         - pip install tox-travis
         - tox
 
-    - python: 3.6
+    - language: python
+      python: 3.4
+      script:
+        - pip install tox-travis
+        - tox
+
+    - language: python
+      python: 3.5
+      script:
+        - pip install tox-travis
+        - tox
+
+    - language: python
+      python: 3.6
       script:
         - pip install tox-travis
         - tox
