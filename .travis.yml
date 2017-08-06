@@ -53,5 +53,8 @@ matrix:
       script:
         - bash jenkins.bash
 
+cache:
+  pip: true
+
 notifications:
   email: false
