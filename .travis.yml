@@ -37,8 +37,8 @@ matrix:
       before_script:
         - docker pull node:slim
       env:
-        - version = v1.0
-        - PYTHON_VERSION = 3.5
+        - version="v1.0"
+        - PYTHON_VERSION=3.5
       script:
         - bash jenkins.bash
 
@@ -48,8 +48,8 @@ matrix:
       before_script:
         - docker pull node:slim
       env:
-        - version = v1.0
-        - PYTHON_VERSION = 2.7
+        - version="v1.0"
+        - PYTHON_VERSION=2.7
       script:
         - bash jenkins.bash
 
